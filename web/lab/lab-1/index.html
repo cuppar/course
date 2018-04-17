@@ -10,36 +10,72 @@
 </head>
 
 <body class="wrap-0">
-  <header class="wrap-1">header</header>
+  <header class="wrap-1">
+    <div class="flex" style="justify-content: space-between;">
+      <form action="#" style="display: flex;
+       display: -webkit-flex; align-content: space-around;">
+        <div>
+          <label for="username">用户名</label>
+          <input type="text" id="username">
+        </div>
+        <div>
+          <label for="password">密码</label>
+          <input type="password" id="password">
+        </div>
+        <button type="submit">登录</button>
+      </form>
+      <div class="logo">
+        <img src="images/header-google.png" alt="logo">
+      </div>
+    </div>
+    <div class="flex" style="flex: 1;">
+        <img style="flex-basis: 15%" src="images/header-news.png" alt="header-news">
+        <img style="flex: 1;" src="images/header-title.png" alt="header-news">
+    </div>
+  </header>
   <div class="wrap-1-body">
     <div class="wrap-2-news">
       <div class="new">
-        <div class="new-top">新闻标题</div>
-        <div class="new-body">
+        <div class="new-top blue-gradient blue-border">新闻标题</div>
+        <div class="new-body blue-gradient blue-border">
           新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容
 
         </div>
       </div>
       <div class="new">
-        <div class="new-top">新闻标题</div>
-        <div class="new-body">
+        <div class="new-top blue-gradient blue-border">新闻标题</div>
+        <div class="new-body blue-gradient blue-border">
           新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容
 
         </div>
       </div>
       <div class="new">
-        <div class="new-top">新闻标题</div>
-        <div class="new-body">
+        <div class="new-top blue-gradient blue-border">新闻标题</div>
+        <div class="new-body blue-gradient blue-border">
           新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容
 
         </div>
       </div>
     </div>
     <div class="wrap-2-main">
-      <div class="wrap-3-top">新闻中心</div>
+      <div class="wrap-3-top">
+        <img style="width: 100%" src="images/news-title.png" alt="news-title">
+      </div>
       <div class="wrap-3-main">
         <div class="wrap-4-article">
-          <div class="wrap-5-top">文章分类</div>
+          <div class="wrap-5-top">
+            <ul class="blue-gradient">
+              <li class="inline-block"><a href="#">分类1</a></li>
+              <li class="inline-block"><a href="#">分类2</a></li>
+              <li class="inline-block"><a href="#">分类3</a></li>
+              <li class="inline-block"><a href="#">分类4</a></li>
+              <li class="inline-block"><a href="#">分类5</a></li>
+              <li class="inline-block"><a href="#">分类6</a></li>
+              <li class="inline-block"><a href="#">分类7</a></li>
+              <li class="inline-block"><a href="#">分类8</a></li>
+            </ul>
+            <hr>
+          </div>
           <div class="wrap-5-main">
             <ul class="article-group">
               <li class="article">
@@ -174,29 +210,49 @@
               </li>
             </ul>
           </div>
+          <div>
+            <ul class="flex blue-gradient" style="justify-content: space-between;">
+              <li class="inline-block"><a href="#">上一页</a></li>
+              <li class="inline-block"><a href="#">首页</a></li>
+              <li class="inline-block"><a href="#">下一页</a></li>
+            </ul>
+          </div>
         </div>
         <div class="wrap-4-aside">
           <div class="aside-item">
-            <img src="images/*.png" alt="image" class="aside-img">
+            <img src="images/aside-1.png" alt="image" class="aside-img">
             <a href="#" class="aside-link">图片对应的文字链接</a>
           </div>
           <div class="aside-item">
-            <img src="images/*.png" alt="image" class="aside-img">
+            <img src="images/aside-2.png" alt="image" class="aside-img">
             <a href="#" class="aside-link">图片对应的文字链接</a>
           </div>
           <div class="aside-item">
-            <img src="images/*.png" alt="image" class="aside-img">
+            <img src="images/aside-3.png" alt="image" class="aside-img">
             <a href="#" class="aside-link">图片对应的文字链接</a>
           </div>
           <div class="aside-item">
-            <img src="images/*.png" alt="image" class="aside-img">
+            <img src="images/aside-4.png" alt="image" class="aside-img">
             <a href="#" class="aside-link">图片对应的文字链接</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <footer class="wrap-1">footer</footer>
+  <footer class="wrap-1">
+    <div class="blue-gradient blue-border">
+      合作媒体
+    </div>
+    <div class="blue-gradient blue-border" style="min-height: 8rem;">
+      <ul>
+        <li class="inline-block"><a href="#">合作媒体-1</a></li>
+        <li class="inline-block"><a href="#">合作媒体-2</a></li>
+        <li class="inline-block"><a href="#">合作媒体-3</a></li>
+        <li class="inline-block"><a href="#">合作媒体-4</a></li>
+        <li class="inline-block"><a href="#">合作媒体-5</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 
 </html>
