@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>test</title>
+    <script type="text/javascript" src="common/jquery132min.js"></script>
+    <link type="text/css" rel="stylesheet" href="common/common.css" />
+    <style>
+        .test {
+            margin: 10px;
+        }
+
+        .topMenu {
+            position: relative;
+        }
+
+            .topMenu span {
+                position: absolute;
+                top: 15px;
+                border: #ccc 1px solid;
+                padding: 5px;
+                width: 60px;
+            }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+
+            //$(".test").append("<br/>在.test里面后置字符串");
+            //$("b").appendTo("p"); //把b后置到p
+            //$(".test").prepend("在.test里面前置字符串"); 
+            //$("p").prepend($("b")); //把b前置到.test
+            //$("b").prependTo("p"); //把b前置到.test
+            $(".topMenu a").click(function () {
+                if ($(this).siblings().length == 0) {
+                    $(this).parent().append("<span>栏目001<br/>栏目002<br/>栏目003<br/>栏目004</span>");
+                }
+                else {
+                    $(this).siblings().show();
+                }
+            }).parent().hover(function () { }, function () {
+                $(this).find("span").fadeOut();
+            })
+        })
+        $(window).resize(function () {
+            alert("Stop it!");
+        });
+    </script>
+</head>
+<body>
+    <div class="test">
+        <p>这是一个测试</p>
+        <b>作者：racemam</b><br />
+        <span class="topMenu"><a href="#">topMenu</a></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<SCRIPT	LANGUAGE="JavaScript" src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></SCRIPT>
+<script	type="text/javascript">
+$(function(){
+$("#courses_select select").change(function	 ()	{
+if($(this).val()=="全部"){
+$("#more_courses #courses_table tbody tr").show();
+}else{
+$("#more_courses #courses_table tbody tr").hide().filter(":contains("+$(this).val()+")").show();
+}
+});
+});
+</script>
+<p>&nbsp;</p>
+<div id="more_courses">
+
+<div id="courses_select">
+<TABLE width="600px">
+<tr >
+<td width="33%">开课日期</td>
+<td width="33%">上课地点</td>
+<td width="33%">上课时段</td>
+</tr>
+<TR>
+	<TD>
+	<select size="6" >
+<option>全部</option>
+<option>2008-01-13</option>
+<option>2008-01-30</option>
+<option>2008-01-16</option>
+</select> 
+</TD>
+	<TD>
+	<select size="6" class="hide">
+<option>全部</option>
+<option>黄埔</option>
+<option>徐汇</option>
+</select>
+</TD>
+	<TD>
+	<select size="6" class="hide">
+<option>全部</option>
+<option>早上</option>
+<option>晚上</option>
+<option>周日全天</option>
+</select>
+</TD>
+</TR>
+</TABLE>
+</div>
+
+<div id="courses_table">
+<table width="600px">
+<thead>
+<tr>
+<th width="25%">开课日期</th><th width="25%">上课地点</th><th width="25%">上课时段</th><th width="25%">优惠价</th><th width="25%">报名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="25%">2008-01-16</td>
+<td width="25%">徐汇</td>
+<td width="25%">早上</td>
+<th width="25%">2680</th>
+<td width="25%"><button	onclick="location.href='#'"><span></span>我要报名</button></td>
+</tr>
+<tr>
+<td>2008-01-30</td>
+<td>黄埔</td>
+<td>早上</td>
+<th>2680</th>
+<td><button	onclick="location.href='#'"><span></span>我要报名</button></td>
+</tr>
+<tr>
+<td>2008-01-30</td>
+<td>徐汇</td>
+<td>周日全天</td>
+<th>2680</th>
+<td><button	onclick="location.href='#'"><span></span>我要报名</button></td>
+</tr>
+<tr>
+<td>2008-01-13</td>
+<td>徐汇</td>
+<td>早上</td>
+<th>1230</th>
+<td><button	onclick="location.href='#'"><span></span>我要报名</button></td>
+</tr>
+
+<tr>
+<td>2008-01-16</td>
+<td>黄埔</td>
+<td>晚上</td>
+<th>4380</th>
+<td><button	onclick="location.href='#'"><span></span>我要报名</button></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+</div>

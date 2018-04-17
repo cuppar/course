@@ -1,0 +1,59 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<title>hello world</title> 
+<script type="text/javascript" src="jquery-1.1.3.pack.js"></script> 
+<script type="text/javascript"> 
+$(document).ready(function(){
+
+$("input").click(function(){
+   // alert($("#css").html());  
+   //输出： <div id="rain">测试</div>
+   // alert($("#css").find("#rain").html());
+    //输出：  测试
+    alert($("#css").find("#rain").end().html());
+   //输出： <div id="rain">测试</div>
+
+//    从上面可以看出，
+//   end()结束对 “#rain” 的引用而返回到 “#css ”
+//   所以“ html()” 是对于 “#css” 起作用的
+//   如果不加end() 则 “html()”是对 #rain 起作用
+
+});
+
+}); 
+</script> 
+<style>
+.test
+{
+color:red;
+}
+</style>
+</head> 
+
+<body> 
+<input type="button"  value="test" >
+
+<div id="css"><div id="rain">测试</div></div>
+
+<a href="http://www.cssrain.cn">
+
+可以修改jQuery选定并且以end()结束的方法有：
+add()
+children()
+eq()
+filter()
+find()
+gt()
+lt()
+next()
+not()
+parent()
+parents()
+siblings()
+更具体的请察看API文档
+</a>
+</body> 
+</html> 

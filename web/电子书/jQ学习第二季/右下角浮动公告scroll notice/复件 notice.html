@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<script src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></script>
+<script>
+<!--
+$(function(){
+	$(window).load(function(){
+		$("div[id=newnotice]").css({"right":"0px","bottom":"1px"});
+		$("div[id=newnotice]").slideDown("slow");
+		
+		/*setTimeout(function(){$("div[id=newnotice]").slideUp("slow")},10000);*/
+	}).scroll(function(){
+		$("div[id=newnotice]").css({"bottom":"0px"});
+		$("div[id=newnotice]").css({"right":"0px","bottom":"1px"});
+	}).resize(function(){
+		$("div[id=newnotice]").css({"bottom":""});
+		$("div[id=newnotice]").css({"right":"0px","bottom":"1px"});	
+	});
+	
+	$("label[id=tomin]").click(function(){
+		$("div[id=noticecon]","div[id=newnotice]").slideUp();
+	});
+	
+	$("label[id=tomax]").click(function(){
+		$("div[id=noticecon]","div[id=newnotice]").slideDown();
+	});
+	
+	$("label[id=toclose]").click(function(){
+		$("div[id=newnotice]").hide();
+	});
+});
+//scroll : 滚动时候保持在页面右侧底部.
+
+-->
+</script>
+<style>
+<!--
+#newnotice {
+	position:absolute;
+	display:none;
+	width:250px;
+	/*height:22px;*/
+	border:solid #9BDF70 1px;
+	background-color: #F0FBEB
+}
+#newnotice p {
+	font-size:12px;
+	margin:1px;
+	padding:0px 2px 0px 5px;
+	background-color:#C2ECA7;
+	color:#666666;
+	height:20px;
+	line-height:20px;
+}
+#newnotice p .title {
+	float:left;
+}
+#newnotice p #bts {
+	display:block;
+	float:right;
+	width:48px;
+	height:15px;
+	/*border:#000000 solid 1px;*/
+}
+#newnotice p #bts .button {
+	display:block;
+	float:left;
+	width:15px;
+	height:15px;
+	line-height:15px;
+	cursor:pointer;
+	/*border:#000000 solid 1px;*/
+}
+#newnotice p #bts #tomin {
+	background-image:url(http://img.namipan.com/p/092113faefc3951569e84c0e71dfe4eaf884051d22010000/0/notice_button.gif);
+	background-position:center;
+}
+#newnotice p #bts #tomax {
+	background-image:url(http://img.namipan.com/p/092113faefc3951569e84c0e71dfe4eaf884051d22010000/0/notice_button.gif);
+	background-position:bottom;
+}
+#newnotice p #bts #toclose {
+	background-image:url(http://img.namipan.com/p/092113faefc3951569e84c0e71dfe4eaf884051d22010000/0/notice_button.gif);
+}
+#newnotice div {
+	font-size:12px;
+	margin:1px;
+	padding:0px 5px 0px 5px;
+	background-color:#FFFFFF;
+	color:#999999;
+	height:75px;
+	line-height:20px;
+}
+-->
+</style>
+</head>
+
+<body>
+<div id="newnotice">
+	<p>
+		<span class="title">最新公告</span>
+        <span id="bts">
+            <label class="button" id="tomin" title="最小化">&nbsp;</label>
+            <label class="button" id="tomax" title="最大化">&nbsp;</label>
+            <label class="button" id="toclose" title="关闭">&nbsp;</label>
+        </span>
+    </p>
+	<div id="noticecon">cssrain.cn---jQuery实用小例子集合. 本例子由Deeka(CR团队之一)优化. </div>
+</div>
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</body>
+</html>

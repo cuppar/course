@@ -1,0 +1,22 @@
+
+<html>
+<head>
+<script language="javascript" type="text/javascript" src="jquery-1.1.3.pack.js"></script>
+<script type="text/javascript">
+$(function(){
+
+$.get("bbb.html",function(rt){
+  $("#main").html(rt);
+  $("#bbb").click(function(){
+  alert('cssrain!!!');
+})
+
+})
+
+})
+</script>
+</head>
+<body>
+<div id="main"></div>
+</body>
+</html>

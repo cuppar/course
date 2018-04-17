@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>幕帘伸缩广告-Download by http://www.codefans.net</title>
+<link type="text/css" rel="stylesheet" href="common/common.css" />
+<script type="text/javascript" src="common/jquery132min.js"></script>
+<style>
+.banner{width:950px;margin:0 auto;padding-top:10px;overflow:hidden;clear:both;}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+	setTimeout("showBanner();",5000);
+});
+function showBanner(){
+	$(".banner p:eq(0)").slideUp(1000,function(){$(".banner p:eq(1)").slideDown(1000);});
+}
+</script>
+
+<div class="banner">
+    <p><a target="_blank" href="#"><img src="http://image.qianxun.com/img_files/20091005164000_960_500.jpg"></a></p>
+    <p class="none"><a target="_blank" href="#"><img src="http://image.qianxun.com/img_files/20091005164019_960_80.jpg"></a></p>
+</div>
+</body>
+</html>

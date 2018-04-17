@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <title>经典选项卡</title>
+        <link type="text/css" rel="stylesheet" href="common/common.css" />
+        <script type="text/javascript" src="common/jquery132min.js"></script>
+        <style type="text/css">
+            .tab{text-align:left;width:500px;border:#ccc 1px solid;margin:100px;}
+            .tab dt{border-bottom:#ccc 1px solid;height:25px;background:#f1f1f1;margin-bottom:-1px;height:25px;line-height:25px;}
+            .tab dt strong{padding:0 15px;color:#444;}
+            .tab dt a{display:inline-block;cursor:pointer;padding:0 10px;text-align:center;background:#f1f1f1;color:#000;}
+            .tab dt a.on{background:#fff;color:#333;font-weight:bold;border-bottom:1px solid #fff;border-right:1px solid #ccc;border-left:1px solid #ccc;}
+            .tab dd{padding:10px;height:200px;clear:both;}
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            $(function(){
+                var tabTitle = ".tab dl dt a";
+                var tabContent = ".tab dl ul";
+                $(tabTitle + ":first").addClass("on");
+                $(tabContent).not(":first").hide();
+                $(tabTitle).unbind("click").bind("click", function () {
+                    $(this).siblings("a").removeClass("on").end().addClass("on");
+                    var index = $(tabTitle).index( $(this) );
+                    $(tabContent).eq(index).siblings(tabContent).hide().end().fadeIn("slow");
+                });
+            });
+        </script>
+        <div class="tab">
+            <dl>
+                <dt><strong>经典选项卡</strong><a>手机卖场</a><a>淑女坊</a><a>海澜男人</a><a>精品居家</a></dt>
+                <dd>
+                    <ul>1111111111111111111111</ul>
+                    <ul>22222222222222222</ul>
+                    <ul>333333333333333333333</ul>
+                    <ul>444444444444444444</ul>
+                </dd>
+            </dl>
+        </div>
+    </body>
+</html>
+

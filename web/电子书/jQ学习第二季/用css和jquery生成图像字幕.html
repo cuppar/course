@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>cssrain - demo</title>
+<SCRIPT LANGUAGE="JavaScript" src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></SCRIPT>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('img.captioned').each(
+		function() {
+			var caption = $(this).attr('title');
+			$(this).wrap('<div class="imgcontainer"></div>')
+			.after('<div class="caption">'+caption+'</div>');
+		}
+	);
+
+//	$().click(function(){
+//	  alert($(".imgcontainer").html() )
+//	})
+
+});
+</script>
+
+<style type="text/css">
+h1	{font:bold 1.2em/1.6em arial;}
+
+.imgcontainer {
+	position:relative;
+	float:left;
+	}
+.caption {
+	position:absolute;
+	bottom:0;
+	left:0;
+	text-align:center;
+	background:#eee;
+	width:100%;
+	opacity:.70;
+	filter:alpha(opacity=80);
+	color:#000;
+	}
+.imgcontainer img {display:block;}
+</style>
+
+
+</head>
+<body>
+<h1>用css和jquery生成图像字幕.</h1>
+
+<img src="http://www.cssrain.cn/skins/tim/isll_t.gif"   title="this is cssrain.cn logo!" />
+
+
+
+<img src="http://www.cssrain.cn/skins/tim/logo-jq.gif"  title="this is cssrain.cn jquery logo!" />
+
+
+<img src="http://www.cssrain.cn/demo/JQuery+API/logo-json.gif"  title="this is cssrain.cn json logo!" />
+
+
+<br><br><br>
+对比:
+<br><br><br>
+
+
+<img src="http://www.cssrain.cn/skins/tim/isll_t.gif" class="captioned"  title="this is cssrain.cn logo!" />
+
+
+
+<img src="http://www.cssrain.cn/skins/tim/logo-jq.gif" class="captioned"  title="this is cssrain.cn jquery logo!" />
+
+
+<img src="http://www.cssrain.cn/demo/JQuery+API/logo-json.gif" class="captioned"  title="this is cssrain.cn json logo!" />
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<title>hello world</title> 
+<script type="text/javascript" src="jquery-1.1.3.pack.js"></script> 
+<script type="text/javascript"> 
+$(document).ready(function(){
+$("input[@value=btn1]").click(function(){
+//以￥分割
+  alert($("span.sale").text().split("￥")[2]+"||"+$("span.sale").text().split("￥")[1]+"||"+$("span.sale").text().split("￥")[0]);
+ });
+
+});
+</script> 
+</head> 
+
+<body> 
+获取价格120:<input type="button" value="btn1" ><br>
+
+<span class="sale">
+Out Sale: ￥160<br />
+Deal Price: ￥120</span>
+
+
+<!--
+应用split来解决这个问题。下面给出一个用split的实例:
+msg ="2007/10/01";
+     msg = msg.split("/");
+     alert(msg[2]);
+	 他会把 msg 分成一个3块组成一个数组 ，然后就可以轻松获取了。
+	 -->
+</body> 
+</html> 

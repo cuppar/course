@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>导航</title>
+<link type="text/css" rel="stylesheet" href="common/common.css" />
+<script language="javascript" type="text/javascript" src="common/jquery132min.js"></script>
+<style type="text/css">
+.nav{width:950px; height:29px; margin:20px auto 0;background:url(images/navbg.gif) repeat-x 0 -180px;position:relative;}
+.navl{position:absolute;left:0;width:3px;height:29px;background:url(images/navbg.gif) no-repeat 0 -150px;}
+.navr{position:absolute;right:0;width:3px;height:29px;background:url(images/navbg.gif) no-repeat right -150px;}
+.nav ul{margin-left:10px;}
+.nav ul li{float:left;line-height:29px;display:inline;text-align:center;padding-left:5px; font-size:14px;font-weight:bold;background:url(images/navbg.gif) no-repeat right -208px;}
+.nav ul li a{float:left;color:#FFF; padding:0 10px;}
+.nav ul li.select{background:url(images/navbg.gif) repeat-x 0 -240px; position:relative;margin-top:-4px;}
+.nav ul li.select a{background:url(images/navbg.gif) repeat-x right -240px;height:33px;line-height:33px;color:#333; text-indent:-3px;}
+</style>
+</head>
+<body>
+<div class="nav">
+	<em class="navl"></em>
+    <em class="navr"></em>
+	<ul>
+    	<li ><a href="#">首 页</a></li>
+        <li><a href="#">手机卖场</a></li>
+        <li><a href="#">数码天下</a></li>
+        <li><a href="#">时尚女人</a></li>
+        <li><a href="#">家居装饰</a></li>
+    </ul>
+</div>
+<script type="text/javascript">
+// nav
+$(function(){
+	
+	var aList = $(".nav ul li");
+	
+	$(aList[0]).addClass("select");
+	$("a").click(
+        function() {
+            $(".nav ul li").removeClass("select");
+            $(this).parent().addClass("select");
+        }
+        );
+})
+
+</script>
+</body>
+</html>

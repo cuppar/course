@@ -1,0 +1,58 @@
+
+1，调用方法是要注意：
+调用方法时要注意操作的是dom对象还是jquery对象。
+普通的dom对象一般可以通过$()转换成jquery对象。
+如：$(document.getElementById("msg"))则为jquery对象，可以使用jquery的方法。
+由于jquery对象本身是一个集合(返回的对象为jquery对象（集合对象），不能直接调用dom定义的方法)。
+所以如果jquery对象要转换为dom对象则必须取出其中的某一项，一般可通过索引取出。
+如：$("#msg")[0]，$("div").eq(1)[0]，$("div").get()[1]，$("td")[5]这些都是dom对象，
+其中$(exp).get(0) 等效于$(exp)[0]。
+可以使用dom中的方法，但不能再使用Jquery的方法。
+
+以下几种写法都是正确的：
+$("#msg").html();
+$("#msg")[0].innerHTML;（经常新手会 $("#msg")[0].html() ,当然这是错误的写法。）
+$("#msg").eq(0)[0].innerHTML;
+$("#msg").get(0).innerHTML;
+要注意，eq返回的是jquery对象，而get(n)和索引返回的是dom元素对象。
+
+
+
+
+2，同一函数实现set和get:
+Jquery中的很多方法都是如此，主要包括如下几个：
+$("#msg").html();               //返回id为msg的元素节点的html内容。
+$("#msg").html("<b>new content</b>");       
+//将“<b>new content</b>” 作为html串写入id为msg的元素节点内容中,页面显示粗体的new content
+
+$("#msg").text();               //返回id为msg的元素节点的文本内容。
+$("#msg").text("<b>new content</b>");       
+//将“<b>new content</b>” 作为普通文本串写入id为msg的元素节点内容中,页面显示<b>new content</b>
+
+$("#msg").height();               //返回id为msg的元素的高度
+$("#msg").height("300");       //将id为msg的元素的高度设为300
+$("#msg").width();               //返回id为msg的元素的宽度
+$("#msg").width("300");       //将id为msg的元素的宽度设为300
+
+$("input").val(");       //返回表单输入框的value值
+$("input").val("test");       //将表单输入框的value值设为test
+
+$("#msg").click();       //触发id为msg的元素的单击事件
+$("#msg").click(fn);       //为id为msg的元素单击事件添加函数
+同样blur,focus,select,submit事件都可以有着两种调用方法
+
+$("#msg").css("background");               //返回元素的背景颜色
+$("#msg").css("background","#ccc")       //设定元素背景为灰色
+$("#msg").css({ color: "red", background: "blue" });//以名值对的形式设定样式
+
+$("p").bind("click", function(){alert($(this).text());});       //为每个p元素添加单击事件
+$("p").unbind();       //删除所有p元素上的所有事件
+$("p").unbind("click")       //删除所有p元素上的单击事件
+
+
+
+3，集合处理功能
+$("tr").each(function(i){this.style.backgroundColor=['#ccc','#fff'][i%2]})       
+//实现表格的隔行换色效果
+$("p").click(function(i){this.style.color=['#f00','#0f0','#00f'][i]})
+//为三个不同的p元素单击事件分别设定不同的处理

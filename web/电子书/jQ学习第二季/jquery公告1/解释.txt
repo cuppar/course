@@ -1,0 +1,5 @@
+没想到slideDown() 加这个 position: absolute ;right:0;bottom:0px;
+能搞出这个效果.
+没想到啊!
+jquery真强大! 
+cssrain.cn

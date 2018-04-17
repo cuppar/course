@@ -1,0 +1,22 @@
+
+<script src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js" type="text/javascript"></script>
+
+<script language="javascript">
+$(function() {
+     var tempArr1=$.map( [0,1,2], function(i){ return i + 4; });
+	 var tempArr2=$.map( [0,1,2], function(i){ return i > 0 ? i + 1 : null; });
+	 alert(tempArr1);//tempArr1 内容为：[4,5,6]
+     alert(tempArr2);//tempArr2 内容为：[2,3]
+	 var tempArr3=$.merge( [0,1,2],[2,3,4] );     
+	 alert( tempArr3 );//tempArr3 内容为： [0,1,2,2,3,4] //晕，1.2吧这个功能去掉了，不知道用什么代替，暂时没找倒方法。找倒的可以告诉我。
+});
+</script>
+<div id="c0">aaaa</div>
+<div id="c1">bbbb</div>
+<div id="c2">cccc</div>
+<!--
+$.map(array, fn)：数组映射。把一个数组中的项目(处理转换后)保存到到另一个新数组中，并返回生成的新数组。
+
+$.merge(arr1,arr2):合并两个数组并删除其中重复的项目。
+
+-->

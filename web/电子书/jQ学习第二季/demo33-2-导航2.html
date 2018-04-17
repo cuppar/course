@@ -1,0 +1,76 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+<head>
+	<title>OL Demo</title>
+	<script src="jquery-1.1.3.pack.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("li.item > ol").hide();
+		$("li.item").hover(function(){
+			$("ol",this).slideDown("fast");//$("ol",this): 寻找this中的ol.
+		},function(){
+			$("ol",this).slideUp("fast");
+		});
+	});
+	</script>
+	<style>
+	body { font-family: Arial; font-size: 16px; }
+	ol { list-style: none; margin: 0; padding: 0; }
+	li.item { float: left; width: 150px; background: #F39; margin: 5px; }
+	li.item a { font-size: 18px; color: #FFF; margin: 4px; }
+	li.item ol { background: #FFF; margin: 3px; }
+	li.item ol a { font-size: 16px; color: #000; margin: 0; }
+	</style>
+</head>
+<body>
+<ol class="menu">
+	<li class="item"><a href="/">导航1</a>
+	<ol>
+		<li><a href="/src/">1111</a></li>
+		<li><a href="/docs/">2222</a></li>
+		<li><a href="/blog/">3333</a></li>
+	</ol></li>
+
+	<li class="item"><a href="/discuss/">导航2</a>
+	<ol>
+		<li><a href="/discuss/">444444</a></li>
+		<li><a href="/tutorials/">555555</a></li>
+		<li><a href="/demos/">66666</a></li>
+		<li><a href="/plugins/">777777</a></li>
+	</ol></li>
+
+	<li class="item"><a href="/dev/">导航3</a>
+	<ol>
+		<li><a href="/src/">88888</a></li>
+		<li><a href="/dev/bugs/">999999</a></li>
+		<li><a href="/dev/recent/">1</a></li>1111
+	</ol></li>
+</ol>
+</body>
+</html>
+
+
+
+
+<!--测试 $(".bmo",".dmo") 选择器-->
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Demo</title>
+	<script src="jquery-1.1.3.pack.js"></script>
+	<script>
+	$(document).ready(function(){
+	   alert($(".bmo",".dmo").html())
+	});
+	</script>
+
+</head>
+<body>
+<div class="dmo"><span class="ado"><div class="bmo">aaa</div></span></div>
+</body>
+</html>
+-->

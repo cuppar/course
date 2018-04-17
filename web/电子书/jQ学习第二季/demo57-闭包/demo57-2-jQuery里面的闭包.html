@@ -1,0 +1,25 @@
+<html>
+<head>
+<script src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></script>
+<script type="text/javascript"> 
+$(function() { 
+var cssrain=jQuery.noConflict(true); //将变量$的控制权让渡给其他库。这样可以确保jQuery不会与其他库的$对象发生冲突。
+alert(cssrain("div").html());//正常  //alert($("div").html());//报错
+}); 
+</script> 
+<div> <p>aaaaaaaaaaaaaaaaa</p></div>
+
+<!--
+那为什么能 var cssrain=jQuery.noConflict(true) 这么写呢？
+首先我们看jQuery的源代码：
+noConflict: function( deep ) {
+  window.$ = _$;
+  if ( deep )
+   window.jQuery = _jQuery;
+  return jQuery;
+}
+明显 ，当deep==true的时候，返回jQuery.
+所以我们var cssrain=jQuery.noConflict(true) 这样定义也就可以理解了。
+所以cssrain就可以代替jQuery了。从而确保jQuery不会与其他库的$对象发生冲突。
+
+-->

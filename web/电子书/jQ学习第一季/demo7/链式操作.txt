@@ -1,0 +1,19 @@
+这里有一个jQuery的技巧不得不提一下：jQuery的链式操作，什么是链式操作呢？ 我们来看看，本来应该写成这样子的： 
+
+$(".stripe tr").mouseover(function(){  
+        $(this).addClass("over");}) 
+$(".stripe tr").mouseout(function(){  
+        $(this).removeClass("over"); })
+
+
+但是我们写成了： 
+
+$(".stripe tr").mouseover(function(){  
+             $(this).addClass("over");}).mouseout(function(){ 
+                 $(this).removeClass("over");})
+
+
+因为鼠标移入移除都是发生在同一个对象上的，所以我们可以将发生在同一个对象上的动作连起来写，这样子如果有很多对象并且在他们身上发生了很多动作那么就会节省很多代码。（我暂时是这样理解的，也不知道对不对希望高手能够斧正。）
+
+
+

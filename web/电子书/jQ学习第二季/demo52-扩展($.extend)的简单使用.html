@@ -1,0 +1,22 @@
+<html>
+<head>
+<script src="jquery-latest.pack.js"></script>
+<script type="text/javascript"> 
+$(function() { 
+
+$.extend({
+       min: function(a, b){return a < b?a:b; },//这里提供了 一个3元运算符，意思是如果 a小于b,那么返回a, 否则返回b.
+       max: function(a, b){return a > b?a:b; } //同理
+});  //为jquery扩展了min,max两个方法
+
+//使用扩展的方法（通过“$.方法名”调用）：
+$("#selectall").click(function(){
+alert("max="+$.max(10,20)+",min="+$.min(10,20));
+})
+
+}); 
+</script> 
+
+
+
+<input type="button" id="selectall" name="selectall" value="alert" /> 

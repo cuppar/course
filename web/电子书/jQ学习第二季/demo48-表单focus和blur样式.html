@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>jQuery Tutorial</title>
+	<style type="text/css" media="screen">
+		body { font-size:14px; }
+		form { width: 20em; margin: 4em auto; }
+		dt { clear: left; float: left; }
+		dd { clear: right; margin-left: 6em; }
+		input, textarea { width: 12em; border: 1px solid #ccc; }
+		input:focus, textarea:focus { border: 1px solid #f00; background: #ffc; }
+/* blur和focus样式 */
+		.ie_hover { background: #ffc; }
+		.ie_focus { border: 1px solid #f00; background: #fcc; } 
+	</style>
+	<script type="text/javascript" src="jquery-latest.pack.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	if ($.browser.msie){//判断是不是IE
+		$("input[@type='text'], input[@type='password'], textarea").focus(function(){
+		$(this).addClass("ie_focus")}).blur(function(){
+		   $(this).removeClass("ie_focus");
+		   });
+		}
+	})
+	</script>
+</head>
+<body>
+	<form>
+		<dl>
+			<dt>Name: <dt>
+			<dd><input type="text" /></dd>
+			<dt>Password: <dt>
+			<dd><input type="password" /></dd>
+			<dt>Textarea: <dt>
+			<dd><textarea></textarea></dd>
+		</dl>
+	</form>
+</body> 
+</html>

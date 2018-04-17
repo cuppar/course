@@ -1,0 +1,40 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<title>hello world</title> 
+<script type="text/javascript" src="jquery-1.1.3.pack.js"></script> 
+<script type="text/javascript"> 
+$(document).ready(function(){
+$("input").keyup(function () {
+      var value = $(this).val();
+      $("p").text(value);
+    }).keyup();
+}); 
+</script> 
+</head> 
+
+<body> 
+
+
+<input type="text" id="d"  />
+
+<p></p>
+<!--
+代码的意思是说让p元素的text始终等于d的value
+第一个keyup是定义了keyup事件执行的函数
+第二个keyup是模拟一次keyup事件
+也就是执行一下keyup里定义的函数
+以此来保证页面初始状态下p元素的text就等于d的value
+
+如果去掉后一个keyup看似也没有问题
+但是当你在input中写入些东西后再刷新页面
+就会发现input中的内容还在 但p中的内容已经不复存在了
+这就是input的特殊之处 
+所以要用第二个keyup来进行页面的初始化
+让两者内容在一开始就保持同步
+
+-->
+</body> 
+</html> 

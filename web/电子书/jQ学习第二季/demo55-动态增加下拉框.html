@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+		<html>
+<head>
+<title>jQuery</title>
+<script src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+<!--
+$(document).ready(function(){
+          var i=1;
+    $("#editlink").click(function(){
+            $("#selectlink").append( "<option value=\"1\">cssrain"+i+"</option>" );
+			i++;
+    });
+
+});
+-->
+</script>
+<input type="button" id="editlink" value="add options" />
+<div id="editlinkdiv">
+    <select id="selectlink" name="selectlink">
+        <option>add options</option>
+    </select>
+</div>

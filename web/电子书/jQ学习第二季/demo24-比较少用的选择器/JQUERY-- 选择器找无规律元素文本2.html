@@ -1,0 +1,38 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<title>hello world</title> 
+<script type="text/javascript" src="jquery-1.1.3.pack.js"></script> 
+<script type="text/javascript"> 
+$(document).ready(function(){
+
+$("input").click(function(){
+alert($("B:contains('Price')").next().text());
+alert($("B:contains('Item')").parent().text());
+
+});
+
+}); 
+</script> 
+<style>
+.test
+{
+color:red;
+}
+</style>
+</head> 
+
+<body> 
+<!-- 求JQUERY找无规律元素文本的办法 -->
+<input type="button"  value="test" >
+
+<TABLE id=table2 cellSpacing=0 cellPadding=0 border=0 width=88%>
+<TR><TD id=cell-details-name><B> Name  : </B> P_30</TD></TR>
+<TR><TD id=cell-details-name><B> Band </B> :LvYePai</TD></TR>
+<TR><TD id=cell-details-name><B>Price:</B><font color=red>$30</font></TD></TR>
+<TR><TD id=cell-details-name><B>Item #:</B>LYP_P_30_01</TD></TR>
+</table>
+</body> 
+</html> 

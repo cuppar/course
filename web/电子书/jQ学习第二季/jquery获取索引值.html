@@ -1,0 +1,15 @@
+<SCRIPT LANGUAGE="JavaScript" src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+$(function(){
+	$("li").hover(function(){
+		alert($("li").index(this));
+	});
+})
+</SCRIPT>
+<ul>
+<li>11</li>
+<li>22</li>
+<li>331</li>
+</ul>
+
+当然可以用each实现, 不过有index(), 何乐而不为呢?嘿嘿

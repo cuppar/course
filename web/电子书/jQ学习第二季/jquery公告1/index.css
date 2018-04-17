@@ -1,0 +1,7 @@
+
+.table_title{width:150px;height:29px;line-height:29px;background:url(images/top_title.gif) no-repeat;padding-top:1px; padding-left:12px;cursor:default}
+.closediv{position:absolute;top:9px;right:11px;width:15px;height:15px;background:url(images/close.gif) no-repeat; background-position:top left;overflow:hidden}
+#noteview{position:fixed;width:400px;height:450px;right:0;bottom:0px;display:none;}
+#notecontent{height:390px;overflow:auto;color:#333; padding:0px 0 0 2px;margin-top:10px;}
+#notecontent div.loading{color:#333}
+* html #noteview{position:absolute}

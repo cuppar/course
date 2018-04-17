@@ -1,0 +1,23 @@
+
+<html>
+<head>
+<script language="javascript" type="text/javascript" src="jquery-1.1.3.pack.js"></script>
+<script language=JavaScript>
+            var prefix = "<a href=http://www.cssrain.cn>";
+            var postfix = "</a>";
+            $(function()
+            {
+                $("span").hover(function()
+                {
+                      $(this).html(prefix+$(this).text()+postfix);
+                },function()
+                {
+                   $(this).html($(this).text());
+                })
+            })
+        </script>
+</head>
+<body>
+<span>本来是没链接的！</span>
+</body>
+</html>

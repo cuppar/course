@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="index.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+	<!--
+	$(function(){
+
+		$(".notetitle").click(function(){
+		// var _this=$(this);
+		 $("#noteview").slideDown();
+         $("#notecontent").html("cssrain  develop. <a href=\"http://www.cssrain.cn \" > jQuery </a> ");  
+		 	// $("#notecontent").html('<img src="images/loading.gif" align="absmiddle">&nbsp;数据载入中...').load("asp/noteview.asp?id="+_this.attr("name"));
+	})
+
+        $(".closediv").hover(function(){
+	$(this).css("background-position","top right");
+},function(){
+	$(this).css("background-position","top left");
+}).click(function(){
+	       $("#noteview").slideUp();
+         });
+	})
+	//-->
+	</SCRIPT>
+
+
+</head>
+
+<body><br><br>
+<input type="button" class="notetitle" value="呼出公告"><br><br>
+
+<a href="javascript:void(0)" class="notetitle">呼出公告</a><br>
+<a href="javascript:void(0)" class="notetitle">呼出公告</a><br>
+<a href="javascript:void(0)" class="notetitle">呼出公告</a><br>
+<a href="javascript:void(0)" class="notetitle">呼出公告</a><br>
+<a href="javascript:void(0)" class="notetitle">呼出公告</a><br>
+
+
+<div id="noteview" style="display: none;">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody>
+<tr>
+<td width="10" height="30" background="images/table/top_left.gif"/>
+<td background="images/table/top_bg.gif">
+<div class="table_title"/>
+<div class="closediv" style="background-position: left top;"/>
+</td>
+<td width="10" background="images/table/top_right.gif"/>
+</tr>
+<tr>
+<td width="10" background="images/table/leftbg.gif"/>
+<td valign="top" bgcolor="#ffffff">
+<div id="notecontent"><img src="images/loading.gif" align="absmiddle">&nbsp;数据载入中...</div>
+</td>
+<td width="10" background="images/table/rightbg.gif"/>
+</tr>
+<tr>
+<td width="10" height="20" background="images/table/bottom_left.gif"/>
+<td background="images/table/bottom_bg.gif"> </td>
+<td width="10" background="images/table/bottom_right.gif"/>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</body>
+</html>

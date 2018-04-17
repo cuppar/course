@@ -1,0 +1,51 @@
+<html>
+<head>
+<script src="jquery-latest.pack.js"></script>
+<script type="text/javascript"> 
+$(function() { 
+//全选
+$("#selectall").click(function() { 
+$("input[@name='shareuser']").each(function() { 
+$(this).attr("checked", true); 
+}); 
+}); 
+//反选
+$("#fanall").click(function() { 
+$("input[@name='shareuser']").each(function() { 
+if($(this).attr("checked"))
+{
+$(this).attr("checked", false); 
+}
+else
+{
+$(this).attr("checked", true); 
+}
+}); 
+}); 
+//取消全部
+$("#deselectall").click(function() { 
+$("input[@name='shareuser']").each(function() { 
+$(this).attr("checked", false); 
+}); 
+}); 
+//alert
+$("#alertall").click(function() { 
+$("input[@name='shareuser']").each(function() { 
+if($(this).attr("checked"))
+{
+alert($(this).val());
+}
+}); 
+}); 
+
+}); 
+</script> 
+
+<input type='checkbox' id='in-shareuser-10' name='shareuser' value='10' />10 
+<input type='checkbox' id='in-shareuser-11' name='shareuser' value='11' />11
+<input type='checkbox' id='in-shareuser-12' name='shareuser' value='12' />12 
+
+<input type="button" id="selectall" name="selectall" value="全选" /> 
+<input type="button" id="fanall" name="fanall" value="反选" /> 
+<input type="button" id="deselectall" name="deselectall" value="取消" /> 
+<input type="button" id="alertall" name="alertall" value="输出" /> 

@@ -1,0 +1,29 @@
+<SCRIPT LANGUAGE="JavaScript" src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></SCRIPT>
+<table  width="50%">
+<tr>
+    <td >选择资源类型：</td>
+	<td  id="changeContent">HTML页面</td>
+	<td>
+		<select id="s1">
+			<option value="1">HTML页面</option>
+			<option value="2">下载资源</option>
+			<option value="3">超链接资源</option>
+			<option value="4">自测题</option>
+			<option value="5">课件资源</option>
+			<option value="6">问卷调查</option>
+			<option value="7">FAQ</option>
+			<option value="8">文本及附件</option>
+		</select>
+	</td>
+</tr>
+</table>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+$(function(){
+		$("#s1").change(function(){
+			$("#changeContent").html( $("option[value="+$(this).val()+"]").html() );
+		});
+	});
+//-->
+</SCRIPT>

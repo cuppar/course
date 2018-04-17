@@ -1,0 +1,12 @@
+提问：
+<input id="remember" name="remember" type="checkbox"> 
+JS：
+var remember = $("#remember").val();
+为什么我无论是否选中该复选框 remember的值都是on？？？
+
+
+
+
+
+
+因为checkbox的默认value值是on,你checked or unchecked ,只是改变了checked这个属性而已

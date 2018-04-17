@@ -1,0 +1,28 @@
+<html>
+<head>
+<script src="jquery-latest.pack.js"></script>
+<script type="text/javascript"> 
+$(function() { 
+if($.browser.msie) {
+$( function() { alert("this is msie"); }); 
+}
+else if($.browser.safari)
+{
+$( function() { alert("this is safari!"); }); 
+}
+else if($.browser.mozilla)
+{
+$( function() { alert("this is mozilla!"); }); 
+}
+else if($.browser.opera)
+{
+$( function() { alert("this is opera"); }); 
+}
+else
+{
+$( function() { alert("i don't konw!"); }); 
+}
+
+}); 
+</script> 
+

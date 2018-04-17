@@ -1,0 +1,26 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<title>filter</title> 
+<script type="text/javascript" src="jquery-1.1.3.pack.js"></script> 
+<script type="text/javascript"> 
+$(document).ready(function() {
+//输出   hello
+alert($("p").filter(".selected").html());
+//输出   How are you?
+alert($("p").not(".selected").html());
+});
+</script> 
+
+</head> 
+<body> 
+
+<p class="selected">Hello</p><p>How are you?</p>
+<!--
+一个新的挑战是从一组类似或相同的元素中只选择某一个特定的元素。
+jQuery提供了filter()和not()来做这个。
+filter()能够将元素精简到只剩下满足过滤条件的那些，not()恰恰相反，他移除了所有满足条件的。-->
+</body> 
+</html> 

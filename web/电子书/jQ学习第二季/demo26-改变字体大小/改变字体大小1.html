@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="jquery-1.1.3.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+        $("#fontsize").change(function(){
+		   //  demo:  
+		   //   $("p").css({"color":fontcolor}); 
+		   //   Object  attr( String name ) 取得第一个匹配元素的属性值
+
+                var size = $("#fontsize").val();//获取下拉框的值
+                $("p").css({"font-size":size }); //把值付给css的font-size
+        });
+        $("#backgroundcolor").change(function(){
+                var backgroundcolor = $("#backgroundcolor").val();
+                $("p").css({"background":backgroundcolor}); 
+        });
+        $("#fontcolor").change(function(){
+                var fontcolor = $("#fontcolor").val();
+                $("p").css({"color":fontcolor}); 
+        });
+});
+
+</script>
+</head>
+<body>
+<div id="formstylecontrols">
+        <label for="fontsize">字体大小</label>
+        <select id="fontsize">
+                <option value="12px">小号</option>
+                <option value="14px">较小</option>
+                <option value="16px" >中号</option>
+                <option value="18px">较大</option>
+                <option value="24px">大号</option>
+        </select>
+
+        <label for="backgroundbackground">背景颜色</label>
+        <select id="backgroundcolor">
+                <option value="#F4FBFF">默认</option>
+                <option value="gray">淡灰</option>
+                <option value="red">红色</option>
+                <option value="green">绿色</option>
+        <option value="yellow">明黄</option>
+        </select>
+
+        <label for="fontcolor">字体颜色</label>
+        <select id="fontcolor">
+                <option value="#000000">黑色</option>
+                <option value="#ff0000">红色</option>
+                <option value="#006600">绿色</option>
+                <option value="#0000ff">蓝色</option>
+        <option value="#660000">棕色</option>
+        </select>
+        <label>
+    <input type="submit" id="style" value="保存设置" />
+    </label>
+</div>
+<h2>第一章：冷宫的咒怨</h2>
+<p>三月初三，春日晴朗</p>
+<p>今天是皇帝的大婚典礼</p>
+<p>金陵城万人空巷，百姓、官吏都出来观看皇帝的迎亲大典。这一天，按照当今皇帝的旨意，用了皇家规格最高的仪仗来迎娶乐亭侯家的女儿冯妙芝。凤辇前有全副武装的侍卫开道，威武庄严；后有彩衣宫女护拥，花团锦簇。车水马龙，熙熙攘攘，香艳欣羡了整整一条街。七十二对绛纱宫灯分外耀眼，乐队高奏迎亲鼓乐，丝竹之声震耳欲聋，把迎亲的气氛推向了高潮。</p>
+<p>浩浩荡荡的迎亲队伍，转过金陵城的主要街道，再把出尽风头的新皇后冯妙芝送到皇帝选定的洞房柔光殿。贺喜的大臣、亲友已经纷纷告退了，很快，帝后就要携手进入洞房，共度春宵了……</p>
+<p>此时此刻，我站在这片泾水和渭水之间的大牧场上，脚下是三块古旧的巨大的石板铺就的小小广场，前面的松柏葱翠里是一座冷冷的尼庵，那就是曾经宠爱过我的君王给我的最后的归宿。</p>
+<p>心如刀绞，我24岁的生命忽然变得如此虚无，它曾如最潋滟的花，还没开到鼎盛，就悄然没落。</p>
+<p>后宫是一座巨大的花园，每个季节都有每个季节的鲜妍，没有任何女人能够常开不败。如果我曾经属于“春”，现在就该轮回到其他人的“夏”了——我的花季，它悄然谢幕了。</p>
+<p>18－24岁，一生中最年轻、最华美的岁月，我在大唐后宫充满胭脂水粉的暧昧气息里，在没有硝烟却满是惊险和刺激的嫔妃争斗里，曾经一度强势崛起，宠冠三千粉黛。</p>
+<p>只是，那个时候，我没有想到春天其实是如此短暂。</p>
+</body>
+</script>
+</html>

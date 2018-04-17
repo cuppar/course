@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" c />
+<title>jQuery</title>
+<script src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+  $("#hbtn_sel").click(function(){
+           $("#abc").find('OPTION').each(function(){//循环option
+                 switch($(this).attr("value"))  //以 option的属性value  作为条件
+                        {
+                           case '1':          //如果为1 ，就替换
+                           $(this).text("C(123)");      
+							break;            //终止case1 , 做下面的动作
+                           case '2':         
+						   $(this).text("A(456)");
+                              break;
+						  case '3':
+						   $(this).text("B(789)");
+                              break;
+                           default:  //默认操作
+                             break;
+                   }
+           });
+                                                
+     });
+
+});
+</script>
+
+</head>
+<body>
+<input type="button" id="hbtn_sel" value="edit">
+  <select id="abc" name="abc" multiple>
+  
+    <option value="2" selected>A</option>
+    <option value="3">B</option>
+	<option value="1">C</option>
+  </select>
+</body>
+</html>

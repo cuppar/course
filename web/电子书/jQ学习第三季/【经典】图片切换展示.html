@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>图片切换展示效果</title>
+<script type="text/javascript" src="common/jquery132min.js"></script>
+<link type="text/css" rel="stylesheet" href="common/common.css" />
+<style type="text/css">
+.scroll{width:408px;height:168px;overflow:hidden;position:relative;border:#ccc 1px solid;}
+.slider{position:absolute;}
+.slider img{width:408px;height:168px;display:block;}
+.num{position:absolute;right:5px;bottom:5px;}
+.num li{float:left;color:#FF7300;text-align:center;line-height:16px;width:16px;height:16px;font-family:Arial;font-size:12px;cursor:pointer;overflow:hidden;margin:3px 1px;border:1px solid #FF7300;background-color:#fff;}
+.num li.on{color:#fff;line-height:21px;width:21px;height:21px;font-size:16px;margin:0 1px;border:0;background-color:#FF7300;font-weight:bold;}
+</style>
+</head>
+<body>
+<script language="javascript" >
+$(function(){
+    var len = $("#idNum > li").length;
+	var index = 0;
+	$("#idNum li").mouseover(function(){
+	   index =   $("#idNum li").index(this);
+	   showImg(index);
+	}); 
+	$('#idTransformView').hover(function(){
+		 if(MyTime){
+		 clearInterval(MyTime);
+		 }
+	},function(){
+		 MyTime = setInterval(function(){
+		   showImg(index)
+		 index++;
+		 if(index==len){index=0;}
+		 } , 4000);
+	});
+	var MyTime = setInterval(function(){
+	   showImg(index)
+	   index++;
+	   if(index==len){index=0;}
+	} , 4000);
+})
+function showImg(i){
+   $("#idSlider").stop(true,false).animate({top : -168*i},800);
+   $("#idNum li")
+    .eq(i).addClass("on")
+    .siblings().removeClass("on");
+}
+</script>
+<div class="scroll" id="idTransformView">
+    <ul class="slider" id="idSlider">
+        <li><img src="images/01.jpg"/></li>
+        <li><img src="images/02.jpg"/></li>
+        <li><img src="images/03.jpg"/></li>
+        <li><img src="images/04.jpg"/></li>
+        <li><img src="images/05.jpg"/></li>
+    </ul>
+    <ul class="num" id="idNum">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</div>
+</body>
+</html>
+

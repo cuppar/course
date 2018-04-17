@@ -1,0 +1,48 @@
+<html>
+<head>
+<script src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></script>
+<script type="text/javascript"> 
+$(function() { 
+jQuery.noConflict(); //把$让渡给其它类库
+(function($){
+     $("div p").click(function(){alert("cssrain!")});
+})(jQuery);            //一个闭包
+}); 
+//实际上这个$只是个形参而已 ,真正的参数是jQuery. 所以当你用prototype里面的$时，并不冲突。
+</script> 
+
+
+
+<div> <p>aaaaaaaaaaaaaaaaa</p></div>
+
+<!--
+
+jQuery.noConflict(); //把$让渡给其它类库
+function tempFunction($){  //创建一个以$为形参的函数
+     $("div p").show();
+}
+TempFunction(jQuery);//传入实参jQuery执行函数.
+
+
+
+
+
+
+
+(function((){do someting})();
+这个你就理解为定义一个匿名函数并立即执行
+upc-jq 21:26:59
+带参数的话就这样：
+(function((形参){do someting})(实参);
+
+
+(function(){var upc="i am upc"})();
+alert(upc);
+会提示undefined
+
+
+好处是不增加额外的全局变量
+执行过程中所有变量都是在匿名函数内部
+
+
+-->

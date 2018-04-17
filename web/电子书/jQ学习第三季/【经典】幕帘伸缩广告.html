@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>幕帘伸缩广告</title>
+<script type="text/javascript" src="common/jquery132min.js"></script>
+<link type="text/css" rel="stylesheet" href="common/common.css" />
+<style>
+/* 幕帘伸缩广告 */
+#bannerBig,#bannerSmall{width:960px; margin:0 auto;}
+#bannerSmall{display:none;}
+</style>
+<script type="text/javascript">
+// 幕帘伸缩广告
+$(function(){
+	setInterval("showBanner();",5000);
+});
+var i=0;
+function showBanner(){
+	if(i==0)
+	{	
+		$("#bannerBig").slideUp(1000,function(){$("#bannerSmall").slideDown(1000);});
+		i=1;
+	}
+	else
+	{
+		$("#bannerSmall").slideUp(1000,function(){$("#bannerBig").slideDown(1000);});
+		i=0;
+	}
+
+}
+</script>
+</head>
+<body>
+<!-- 幕帘伸缩广告 -->
+<div id="bannerBig"><a target="_blank" href="#"><img src="images/01.bmp"></a></div>
+<DIV id="bannerSmall"><A target="_blank" href="#"><IMG src="images/02.bmp"></A></DIV>
+</body>
+</html>

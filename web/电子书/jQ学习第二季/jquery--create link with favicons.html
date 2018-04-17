@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>cssrain - demo</title>
+<SCRIPT LANGUAGE="JavaScript" src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></SCRIPT>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.faviconThis a[href^="http"]').each( function() {
+		var href = $(this).attr('href');
+		var domain = href.match(/(\w+):\/\/([^/:]+)(:\d*)?([^# ]*)/);
+		domain = RegExp.$2;
+		var cuesrc = "http://"+domain+"/favicon.ico";
+		$(this).after('<img class="faviconcue" src="'+cuesrc+'" onerror="return setToGeneric(this);"  />');
+	});
+});
+function setToGeneric(img) {
+	$(img).attr('src','http://www.cssrain.cn/favicon.ico');
+}
+</script>
+
+<style type="text/css">
+h1	{font:bold 1.2em/1.6em arial;}
+a{TEXT-DECORATION:none}
+li{padding:4px;}
+.faviconThis	{ width:300px; border:1px solid #ccc; }
+img.faviconcue {vertical-align:text-bottom;margin-left:2px;height:16px;width:16px;}
+</style>
+
+
+</head>
+<body>
+<h1>Create link with Favicons</h1>
+
+<div class="faviconThis">
+	<ul>
+		<li><a href="http://www.cssrain.cn">cssrain</a></li>
+		<li><a href="http://www.google.com">google</a></li>
+		<li><a href="http://www.baidu.com">baidu</a></li>
+		<li><a href="http://www.yahoo.com">yahoo</a></li>
+	</ul>
+	<ul>
+		<li><a href="http://www.baidu.com">°Ù¶È</a> (click this and  go to baidu.com)</li>
+		<li><a href="http://www.cssrain.cn">cssrain</a> (click this and  go to cssrain.cn.this is jquery team work.)</li>
+	</ul>
+</div>
+
+
+</body>
+</html>

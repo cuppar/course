@@ -1,0 +1,120 @@
+<SCRIPT LANGUAGE="JavaScript" src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js">
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+$(function(){
+ $("tr").each(function(i){   this.style.backgroundColor  =  ['#ccc','#fff'][i%2]   })   
+ //$("tr:not(:first)")
+//$("tr:even").each(function(){   this.style.backgroundColor  =  '#ccc' })   //当然even能实现
+})
+//-->
+</SCRIPT>
+<table>
+<thead>
+<tr>
+<td>姓名</td>
+<td>电话</td>
+<td>地址</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Carrion Fly</td>
+<td>Worldwide</td>
+<td>gray</td>
+</tr>
+<tr>
+<td>Office Fly</td>
+<td>California, Bay Area</td>
+<td>white</td>
+</tr>
+<tr>
+<td>Common House Fly</td>
+<td></td>
+<td>brown</td>
+</tr>
+<tr>
+<td>Horn Fly</td>
+<td>Kansas</td>
+<td>red</td>
+</tr>
+<tr>
+<td>Face Fly</td>
+<td></td>
+<td>green</td>
+</tr>
+<tr>
+<td>Stable Fly</td>
+<td></td>
+<td>black</td>
+</tr>
+<tr>
+<td>Carrion Fly</td>
+<td>Worldwide</td>
+<td>gray</td>
+</tr>
+<tr>
+<td>Office Fly</td>
+<td>California, Bay Area</td>
+<td>white</td>
+</tr>
+<tr>
+<td>Common House Fly</td>
+<td></td>
+<td>brown</td>
+</tr>
+<tr>
+<td>Horn Fly</td>
+<td>Kansas</td>
+<td>red</td>
+</tr>
+<tr>
+<td>Face Fly</td>
+<td></td>
+<td>green</td>
+</tr>
+<tr>
+<td>Stable Fly</td>
+<td></td>
+<td>black</td>
+</tr>
+</tbody>
+</table> 
+
+<!--
+这里是JS里的数组吗？
+
+
+$(function(){
+$("tr").each(function(i){   this.style.backgroundColor  =  ['#ccc','#fff'][i%2]   })  
+  })
+
+  ['#ccc','#fff'][i%2] //就这里这个。当然可以用tr:even 。
+
+代码的过程是知道的， 对i%2取余数，要么为0要么为1，
+所以 要么是['#ccc','#fff'][0] 要么是 ['#ccc','#fff'][1] ，
+所以要么是#ccc,要么是#fff.
+
+javascript数组可以这么定义 var array =['arr1','arr2'];
+但记忆钟似乎不能 ['arr1','arr2'][0],['arr1','arr2'][1],这样写。
+
+在JQ群理问了，他说是 JQ里把数组封装了。
+才可以['arr1','arr2'][0],['arr1','arr2'][1],这样写。
+
+说Javascript里要 这样写：
+if(i%2){
+this.style.backgroundColor='#ccc' ;
+else 
+this.style.backgroundColor='#fff';
+}
+晕了。
+
+刚才自己写了个例子，证明自己是正确的。
+<script>
+  for(var i = 0;i<10;i++){
+  alert(['1','2'][i%2]);
+  }
+</script>
+
+嘿嘿。有时候太不相信自己了。
+-->

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>弹出层</title>
+<script type="text/javascript" src="common/jquery132min.js"></script>
+<link type="text/css" rel="stylesheet" href="common/common.css" />
+<style>
+/* 弹出层 */
+#UpLayer span{border:#fff 1px solid; width:80px; padding:0 5px; line-height:20px; display:block;}
+#UpLayer ul{display:none;position:absolute;border:#ccc 1px solid;width:80px; padding:5px; line-height:20px; background:#f1f1f1; margin:-1px 0 0 0;}
+#UpLayer ul li{ border-bottom:#ccc 1px dashed;}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+// 弹出层
+$(document).ready(function(){
+	var objStr = "#UpLayer";
+	$(objStr).mouseover(function () { $("#UpLayer  ul").show(); });
+	$(objStr).mouseout(function(){$(objStr + " ul").hide();});
+});
+</script>
+<!-- 弹出层 -->
+<div id="UpLayer">
+	<span><a href="javascript:void(0)">弹出层</a></span>
+    <ul>
+        <li><a href="#">手机资讯</a></li>
+        <li><a href="#">热门文章</a></li>
+        <li><a href="#">联系站长</a></li>
+        <li><a href="#">建议意见</a></li>
+    </ul>	
+</div>
+</body>
+</html>

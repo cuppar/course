@@ -1,0 +1,26 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<title>hello world</title> 
+<script type="text/javascript" src="jquery-1.1.3.pack.js"></script> 
+<script type="text/javascript"> 
+$(document).ready(function(){
+$("input").keyup(function () {
+      var value = $(this).val();
+      $("p").text(value);
+    });
+}); 
+</script> 
+</head> 
+
+<body> 
+
+
+<input type="text" id="d"  />
+
+<p></p>
+
+</body> 
+</html> 

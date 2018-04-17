@@ -1,0 +1,9 @@
+解决自定义方法或其他类库与jQuery的冲突
+　　很多时候我们自己定义了$(id)方法来获取一个元素，或者其他的一些js类库如prototype也都定义了$方法，如果同时把这些内容放在一起就会引起变量方法定义冲突，Jquery对此专门提供了方法用于解决此问题。
+　　使用jquery中的jQuery.noConflict();方法即可把变量$的控制权让渡给第一个实现它的那个库或之前自定义的$方法。之后应用Jquery的时候只要将所有的$换成jQuery即可，如原来引用对象方法$("#msg")改为jQuery("#msg")。
+如：
+jQuery.noConflict(); 
+// 开始使用jQuery
+jQuery("div   p").hide();
+// 使用其他库的 $() 
+$("content").style.display = 'none'; 

@@ -1,0 +1,23 @@
+<html>
+<head>
+<script src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></script>
+<script>
+</script>
+<script type = "text/javascript">
+
+  $(function(){
+     $('td:empty').html('-');
+  });
+
+
+</script>
+<!--   要在表格中的每一个空列中都添加一个横杠，可以使用：:empty 伪选择器-->
+</head>
+<body>
+<table border="1" width="100px">
+<tr><td>1</td><td></td><td></td></tr>
+<tr><td></td><td>2</td><td></td></tr>
+<tr><td></td><td></td><td>3</td></tr>
+</table>
+</body>
+</html>

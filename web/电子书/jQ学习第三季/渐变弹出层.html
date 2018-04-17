@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>渐变弹出层</title>
+<script type="text/javascript" src="common/jquery132min.js"></script>
+<link type="text/css" rel="stylesheet" href="common/common.css" />
+<style>
+/* 渐变弹出层 */
+#race{display:block;width:200px;height:50px;line-height:50px;text-align:center;background:#CCC;border:#555 1px solid;}
+.raceShow{background-color:#f1f1f1;border:solid 1px #ccc;position:absolute;display:none;width:300px;height:100px;padding:5px;font-size:12px;}
+
+#UpLayer span{border:#fff 1px solid; width:80px; padding:0 5px; line-height:20px; display:block;}
+#UpLayer ul{display:none;position:absolute;border:#ccc 1px solid;width:80px; padding:5px; line-height:20px; background:#f1f1f1; margin:-1px 0 0 0;}
+#UpLayer ul li{ border-bottom:#ccc 1px dashed;}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+// 渐变弹出层
+$(document).ready(function(){
+	var speed = 600;//动画速度
+	$("#race a").click(function(event){//绑定事件处理
+		event.stopPropagation();
+		var offset = $(event.target).offset();//取消事件冒泡
+		$("#racePop").css({ top:offset.top + $(event.target).height() + "px", left:offset.left });//设置弹出层位置
+		$("#racePop").show(speed);//动画显示
+	});
+	$(document).click(function(event) { $("#racePop").hide(speed) });//单击空白区域隐藏
+	$("#racePop").click(function(event) { $("#racePop").hide(speed) });//单击弹出层则自身隐藏
+
+	var objStr = "#UpLayer";
+	$(objStr).mouseover(function(){$(objStr + " ul").show();});
+	$(objStr).mouseout(function(){$(objStr + " ul").hide();});
+});
+</script>
+    
+<!-- 渐变弹出层 -->
+<div id="race"><a href="#">点击</a></div>
+<div id="racePop" class="raceShow">这里是弹出层效果</div>
+
+
+
+<div id="UpLayer">
+	<span><a href="javascript:void(0)">弹出层</a></span>
+    <ul>
+        <li><a href="#">手机资讯</a></li>
+        <li><a href="#">热门文章</a></li>
+        <li><a href="#">联系站长</a></li>
+        <li><a href="#">建议意见</a></li>
+    </ul>	
+</div>
+
+</body>
+</html>

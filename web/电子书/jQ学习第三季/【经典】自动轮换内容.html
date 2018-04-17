@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>自动轮换内容</title>
+<script type="text/javascript" src="common/jquery132min.js"></script>
+<link type="text/css" rel="stylesheet" href="common/common.css" />
+<style>
+/* 自动轮换内容 */
+.change{margin:100px;padding:5px;width:506px;height:201px;border:#e7e7e7 1px solid;}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+// 自动轮换内容
+$(document).ready(function(){
+	var objStr = ".change ul li";
+	$(objStr + ":not(:first)").css("display","none");
+	setInterval(function(){
+	if( 
+	    $(objStr + ":last").is(":visible")){
+		$(objStr + ":first").fadeIn("slow").addClass("in");
+		$(objStr + ":last").hide()
+	}
+	else{
+		$(objStr + ":visible").addClass("in");
+		$(objStr + ".in").next().fadeIn("slow");
+		$(objStr + ".in").hide().removeClass("in")}
+	},4000) //每3秒钟切换
+})
+</script>
+<!-- 自动轮换内容 -->
+<div class="change">
+	<ul>
+        <li><a href="#"><img src="images/01.jpg"/></a></li>
+        <li><a href="#"><img src="images/02.jpg"/></a></li>
+        <li><a href="#"><img src="images/03.jpg"/></a></li>
+    </ul>
+</div>
+
+也可以是定时显示一条信息
+</body>
+</html>

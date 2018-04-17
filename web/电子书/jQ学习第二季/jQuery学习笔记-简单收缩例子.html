@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>JQuery Collapse</title>
+<SCRIPT LANGUAGE="JavaScript" src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></SCRIPT>
+<script type="text/javascript">
+$(function()
+{
+
+$("#mostrar").click(function(event) {
+event.preventDefault(); //  阻止默认的行为 ,这个例子把超链接 阻止了,当然此时也可以用 return false;
+$("#caja").slideToggle();
+//return false;
+});
+
+$("#caja a").click(function(event) {
+event.preventDefault();
+$("#caja").slideUp();
+});
+});
+</script>
+<style type="text/css">
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666666;	
+}
+a{color:#993300; text-decoration:none;}
+#caja {
+width:70%;
+display: none;
+padding:5px;
+border:2px solid #FADDA9;
+background-color:#FDF4E1;
+}
+#mostrar{
+display:block;
+width:70%;
+padding:5px;
+border:2px solid #D0E8F4;
+background-color:#ECF8FD;
+}
+</style>
+</head>
+<body>
+<a href="http://www.cssrain.cn" id="mostrar">cssrain.cn</a>
+
+<div id="caja">
+<a href="#" class="close">[x]</a>
+<p>做更好的jQuery学习网站.jQuery插件翻译,整理.jquery-QQ群:40875587(请注明cssrain)<br>
+jQuery问题请发到我的email : cssrain@gmail.com<br>
+cssrain jQuery团队.blog文章欢迎转载. 请注明来处. 
+
+</p>
+</div>
+</body>
+</html>

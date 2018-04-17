@@ -1,0 +1,41 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<title>hello world</title> 
+<script type="text/javascript" src="jquery-1.1.3.pack.js"></script> 
+<script type="text/javascript"> 
+$(document).ready(function(){
+
+$("input").click(function(){
+   alert($('div + p').html());
+	 //alert($('div').next().html());
+});
+
+}); 
+</script> 
+<style>
+.test
+{
+color:red;
+}
+</style>
+</head> 
+
+<body> 
+<!-- jQuery选择器里面的加号是什么意思：
+
+ 这个和正则表达式 + 的意思一样，得到紧接的节点。示例中将打印 div 元素紧接的p元素的html.
+
+ 注意了： 不是 加起来，而是 紧接的那个。 不是输出两个，而是一个。
+
+
+-->
+<input type="button"  value="test" >
+
+<div>first</div>
+<p>tow</p>
+
+</body> 
+</html> 

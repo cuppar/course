@@ -1,0 +1,40 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+<head>
+	<title>TODO List</title>
+	<script src="jquery-1.1.3.pack.js"></script>
+
+	<script>
+	$(document).ready(function(){
+	$("#add").click(function(){
+	var n=$("#num").html();
+      var num=parseInt(n)+1;
+	 if(num==0){alert("cc");}
+      $("#num").html(num);
+                        	});
+
+	$("#jian").click(function(){
+	var n=$("#num").html();
+      var num=parseInt(n)-1;
+	   if(num==0){alert("²»ÄÜÎª0!"); return}
+      $("#num").html(num);
+                        	});
+
+	});
+	</script>
+	<style>
+	body { font-family: Arial; font-size: 16px; }
+	ul { list-style: none; margin: 10px; padding: 0; }
+	li { border-left: 10px solid #F39; padding-left: 10px; margin: 5px; }
+	</style>
+
+</head>
+<body>
+
+<div id="num">3</div>
+<input type="button" id="add" value="+" />
+<input type="button" id="jian" value="-" />
+</body>
+</html>

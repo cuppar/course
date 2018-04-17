@@ -1,0 +1,14 @@
+
+<script src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js" type="text/javascript"></script>
+
+<input type="text" name="uName" value="cssrain"/>
+<input type="text" name="uName1" value="cssrain"/>
+<script language="javascript">
+$(function() {
+        $("input[@name='uName']").focus(
+                function() {if(this.value=='cssrain') this.value='';}
+        ).blur(
+                function() {if(this.value=='') this.value='cssrain'}
+        );
+});
+</script>

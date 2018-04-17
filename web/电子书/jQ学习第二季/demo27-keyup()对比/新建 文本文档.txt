@@ -1,0 +1,1 @@
+$(document).ready()是在DOM结构载入完后执行的，而window.onloal是得在所有文件都加载完后执行的，注意区别，一个是DOM加载完，一个是所有文件加载完

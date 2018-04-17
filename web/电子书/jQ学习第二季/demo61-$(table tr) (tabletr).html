@@ -1,0 +1,54 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+<head>
+	<title>TODO List</title>
+	<script src="jquery-1[1].2.1.pack.js"></script>
+
+	<script>
+	$(document).ready(function(){
+
+	alert($("table").html());
+	alert($("table tr").eq(0).html()+" "+$("table tr").eq(1).html())
+    alert($("table>tr").html())  //啊！为什么输出null啊，不是说 $("table > tr)是选择table下的子节点吗？
+   	//对的，因为table的子节点并不是tr,而是tbody. 这就是为什么我第一次要输出 $("table").html() 的原因了。
+	});
+	</script>
+
+
+</head>
+<body>
+<table id="table_1">
+<tr id="tr_1">
+   <td>name1<td>
+   <td>pass1<td>
+   <td>20<td>
+</tr>
+<tr id="tr_2">
+   <td>namex<td>
+   <td>passx<td>
+   <td>16<td>
+</tr>
+<tr id="tr_3">
+   <td>namess<td>
+   <td>pass1<td>
+   <td>25<td>
+</tr>
+<tr id="tr_4">
+   <td>name1<td>
+   <td>pass1<td>
+   <td>60<td>
+</tr>
+<tr id="tr_5">
+   <td>namedd<td>
+   <td>passx<td>
+   <td>30<td>
+</tr>
+</table>
+</body>
+</html>
+<!--
+$("table tr")  选择 tbale 下所有 子、孙 节点
+$("table > tr) 选择 table 下的子 节点
+-->

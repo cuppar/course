@@ -1,0 +1,14 @@
+<SCRIPT LANGUAGE="JavaScript" src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></SCRIPT>
+
+<script>   
+$(function(){
+		$("#rain").click(function(e){
+		   $("#status").html(e.pageX+' , '+e.pageY);
+		})
+})
+  </script>  
+  
+  <h2 id="status">0 , 0</h2>
+  <div  id="rain" style="width:200px;height:200px;background:#eee;">
+  click me anywhere!
+  </div>

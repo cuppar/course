@@ -1,0 +1,24 @@
+
+<script src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js" type="text/javascript"></script>
+
+<script language="javascript">
+$(function() {
+       $.each( ["#455","#aaa","#ddd"], function(i, n){
+	   $("#c"+i).css("background",n); 
+	   }); 
+});
+</script>
+<div id="c0">aaaa</div>
+<div id="c1">bbbb</div>
+<div id="c2">cccc</div>
+<!--
+$.each(obj, fn)：通用的迭代函数。可用于近似地迭代对象和数组（代替循环）。
+
+  $.each( [0,1,2], function(i, n){ alert( "Item #" + i + ": " + n ); }); 
+等价于：
+var tempArr=[0,1,2];
+for(var i=0;i<tempArr.length;i++){
+       alert("Item #"+i+": "+tempArr[i]);
+}
+ 
+-->

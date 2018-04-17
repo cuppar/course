@@ -1,0 +1,29 @@
+.is(':visible')是什么意思？
+最近刚刚开始学习jq。 看了几个小例子 了。
+遇到一个问题不清楚，查了API 也没搞清楚。
+API说IS（）的意思：
+Boolean布尔值is( String  expr )用一个表达式来检查当前选择的元素集合，如果其中至少有一个元素符合这个给定的表达式就返回true。
+$(document).ready(function() {
+$('#faq').find('dd').hide();
+$('#faq').find('dt').click(function() {
+         var answer = $(this).next();
+         if (answer.is(':visible')) {
+             answer.slideUp();
+         } else {
+             answer.slideDown();
+         }
+     });
+});
+
+请高手帮我解释一下  if (answer.is(':visible')) {
+这句话的含义。里面的(:visible)  是啥意思？
+为什么能这么写？
+
+
+正解：
+answer.is(':visible')是指可见的answer元素.
+如果可见就调用answer.slideUp();使之隐藏.
+else则是不可见的元素 调用answer.slideDown();使之显示.
+类似的写法还有answer.is(':first')answer.is(':last')之类的,类似于CSS的伪类a:hover
+
+

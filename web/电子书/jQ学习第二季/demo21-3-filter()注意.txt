@@ -1,0 +1,13 @@
+求助:filter在Firefox里出错，不知道是不是我写的不对?
+
+var stext = $(data).filter('#content').html();
+
+data是通过ajax取回的内容，我想进行筛选，只要取回内容里的ID为content的部分。
+这样的写法在IE里一切正常，不知道为什么在Firefox里就不行，用Firebug来进行查找错误，提示是jquery-1.2.1.js里第1521行的“f = eval('false||function(a,i){return ' + f + '}');”这段有问题，不知道是不是BUG，也不知道该如何处理。折腾N久，近乎崩溃了！没办法，本人刚接触jQuery，还是个小菜鸟。
+
+
+这个问题已经自己解决！
+不知道有没有人遇到同样的问题，但我想还是分享一下自己的经验！
+用filter进行筛选的时候，固定的数据如 march.hu 所说的那个（var data = "<p>第一段</p><p id='second'>第二段</p>";），这种没有关系，但用AJAX取回动态数据进行筛选的时候，必须同时指定标签类型和ID，才能正常进行筛选，要不然在Firefox下会出错。
+错误的：var stext = $(data).filter('#content').html();
+正确的：var stext = $(data).filter('div#content').html();

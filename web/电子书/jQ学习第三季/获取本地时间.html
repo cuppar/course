@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>test-Download by http://www.codefans.net</title>
+<script type="text/javascript">
+function time(){
+	var time=new Date().getHours();
+	if(time<10){
+		document.write("早上好");
+	}
+	else if(time>=10&&time<=20){
+		document.write("下午好");
+	}
+	else{
+		document.write("晚上好");
+	}
+}
+function theDay(){
+	var theDay=new Date().getDay();
+	switch(theDay){
+		case 1:
+		document.write("1");
+		break;
+		case 2:
+		document.write("2");
+		break;
+		case 3:
+		document.write("3");
+		break;
+		default:
+		document.write("4");
+	}
+}
+function num(a,b){
+	c=a*b;
+	return c;
+}
+function for01(){
+	for(i=0;i<=10;i++){
+		if(i==4){break;};
+		document.write("<br/>");
+		document.write("A"+i);
+	}
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+time();
+theDay();
+document.write(num(6,5));
+for01();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" /> 
+<title>hello world</title> 
+<script type="text/javascript" src="jquery-1.1.3.pack.js"></script> 
+<script type="text/javascript"> 
+$(document).ready(function(){
+//第2个 p :
+    alert("eq="+ $("p").eq(1).text());
+//	alert( $("p:eq(1)").text());
+
+//第3个p之后的p
+	alert("gt="+  $("p:gt(2)").text());
+//	alert( $("p").gt(2).text());
+
+//第2个p以及之前的p  即第1个p和第2个p
+	alert("lt="+  $("p:lt(2)").text());
+  });
+
+</script> 
+</head> 
+
+<body> 
+
+
+
+
+<p>11111</p>
+<p>22222</p>
+<p>33333</p>
+<p>44444</p>
+<p>55555.</p>
+
+<!--其实简单的说因为所有jQuery的select(选择器)返回的是一个数组。你可认为
+是得到这个数组的第几个元素。
+注意是从0开始的。-->
+</body> 
+</html> 

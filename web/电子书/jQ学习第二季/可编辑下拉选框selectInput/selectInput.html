@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>selectInput</title>
+<script src="http://www.cssrain.cn/demo/JQuery+API/jquery-1[1].2.1.pack.js"></script>
+<script>
+<!--
+$(function(){
+	var offset = $("input[id=input1]").offset();
+	//$("input[id=input1]").mouseover(function(){
+	//	$(this).select();
+	//	$(this).focus();
+	//});
+	$("input[id=input1]").css({"z-index":2,"width":150});
+	$("select[id=select]").css({"display":"block","width":160,"border":"0px","clip":"rect(0 165 21 140)","position":"absolute","z-index":-1,"left":function(){return offset.left},"top":function(){return offset.top}});
+	$("select[id=select]").change(function(){
+		var newvar = $("select[id=select] option:selected").text();
+		$("input[id=input1]").val(newvar);
+	});
+
+		$("#showdiv").click(function(){
+            alert( "Email:"+ $("#user_name").val()+"@"+$("#input1").val()  );     
+		})
+});
+-->
+</script>
+</head>
+
+<body>
+<input id="user_name" name="user_name" type="text" /> @ <input id="input1" name="input1" type="text" value="wiso.cn" />
+<select name="select" id="select" style="display:none;">
+	<option value="bb">163.com</option>
+	<option value="cc">21cn.com</option>
+	<option value="dd">sina.com.cn</option>
+	<option value="ee">wiso.cn</option>
+	<option value="bb">163.com</option>
+	<option value="cc">21cn.com</option>
+	<option value="dd">sina.com.cn</option>
+	<option value="ee">wiso.cn</option>
+	<option value="bb">163.com</option>
+	<option value="cc">21cn.com</option>
+	<option value="dd">sina.com.cn</option>
+	<option value="ee">wiso.cn</option>
+	<option value="bb">163.com</option>
+	<option value="cc">21cn.com</option>
+	<option value="dd">sina.com.cn</option>
+	<option value="ee">wiso.cn</option>
+</select>
+
+&nbsp;&nbsp;
+<input type="button" value="输出" id="showdiv">
+
+</body>
+</html>

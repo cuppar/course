@@ -1,0 +1,24 @@
+大家都知道,用jquery的appendTo动态增加的东西,添加的事件只能跟在appendTo后写.
+比如:
+$("<div><img src=''></div>").appendTo("body");
+如果我们想给这动态增加的东西 添加一个click事件.
+我们可以这样写:
+$("<div><img src=''></div>").appendTo("body").click(function(){
+   // do something... ;
+});
+
+如果我现在想对div,里面的img添加事件, 而不是整个div.
+
+那我们怎么办呢?
+
+也许你已经想到方法了,
+
+我说下我的方法吧.  
+$("<div><img src=''></div>").appendTo("body").find("img").click(function(){
+   // do something... ;
+});
+这样click事件 就只对img有效了.
+
+
+注意:
+find()方法 要注意配合跟 end()使用...
