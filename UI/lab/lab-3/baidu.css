@@ -1,0 +1,53 @@
+.nav {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 19px 0 5px;
+  padding: 0 96px 0 0;
+}
+.nav-item {
+  color: black;
+  font-size: 13px;
+  float: left;
+  margin-left: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.nav a.more {
+  position: absolute;
+  right: 10px;
+  text-decoration: none;
+  background-color: #3586fb;
+  color: white;
+  font-size: 13px;
+  width: 60px;
+  height: 23px;
+  line-height: 24px;
+  margin-left: 19px;
+  margin-right: 2px;
+  float: left;
+  text-align: center;
+}
+#head .search span input {
+  width: 550px;
+  height: 30px;
+  margin-top: 30px;
+}
+#head .search span a {
+  width: 100px;
+  height: 30px;
+  margin-top: 30px;
+  background-color: #38f;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: -5px;  
+  padding: 3.5px 2px 2px 2px;
+  color: white;
+}
+#head .qrcode {
+  margin-top: 180px;
+}
+#head .footer {
+  text-align: center;
+}
