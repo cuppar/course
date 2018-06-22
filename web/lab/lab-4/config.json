@@ -1,0 +1,5 @@
+{
+  "mariaDbAddress": "127.0.0.1",
+  "mariaDbDatabase": "webDb",
+  "mariaDbUser": "root"
+}

@@ -1,0 +1,29 @@
+body {
+  font-family: Verdana, Geneva, Arial, sans-serif;
+  font-size: medium;
+  background-color: tan;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px dotted gray;
+  padding: 10px 10px 10px 10px;
+}
+
+h2 {
+  font-size: 150%;
+  text-align: center;
+}
+
+table {
+  font-size: 150%;
+  padding: 0px;
+  text-align: center;
+}
+
+.result-table {
+  font-size: 100%
+}
+input{
+  max-width: 100px;
+}

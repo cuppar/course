@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block body %}
+<button id="time-btn" onclick="ip()">按ip查找</button>
+<button id="ip-btn" onclick="time()">按时间查找</button>
+<hr>
+<h1 id="time-title">按时间查找</h1>
+<h1 id="ip-title">按ip查找</h1>
+<hr>
+<form id="time-form" action="/timeLog" method="post">
+  <input type="date" name="time">
+  <button type="submit">时间查找</button>
+</form>
+<form id="ip-form" action="/ipLog" method="post">
+  <input type="text" name="ip">
+  <button type="submit">ip查找</button>
+</form>
+<hr> {{logResults|safe}}
+<hr>
+<span style="display: none;" id="state">{{state|default('ip')}}</span>
+<script>
+  function time() {
+    document.getElementById('ip-title').style.display = "none";
+    document.getElementById('ip-btn').style.display = "none";
+    document.getElementById('ip-form').style.display = "none";
+    document.getElementById('time-title').style.display = "inline";
+    document.getElementById('time-btn').style.display = "inline";
+    document.getElementById('time-form').style.display = "inline";
+  }
+
+  function ip() {
+    document.getElementById('time-title').style.display = "none";
+    document.getElementById('time-btn').style.display = "none";
+    document.getElementById('time-form').style.display = "none";
+    document.getElementById('ip-title').style.display = "inline";
+    document.getElementById('ip-btn').style.display = "inline";
+    document.getElementById('ip-form').style.display = "inline";
+  }
+
+
+  state = document.getElementById('state').innerText
+  console.log(state)
+  if (state === 'ip') {
+    ip()
+  } else if (state === 'time') {
+    time()
+  }
+</script>
+{% endblock %}

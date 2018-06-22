@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  <title>留言板</title>
+</head>
+
+<body>
+  <h1 id="title"></h1>
+  <a href="#">我的留言</a>
+  <hr>
+  <label for="say-to">留言给:</label>
+  <input type="text" id="say-to" name="say-to">
+  <br>
+  <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+  <br>
+  <button id="submit">留言</button>
+  <div id="result"></div>
+  <script>
+    $(function () {
+      let cookies = document.cookie.split('; ')
+      let cookie_dict = {}
+      cookies.forEach(function (value) {
+        let name_value = value.split('=')
+        cookie_dict[name_value[0]] = name_value[1]
+      })
+      $('#title').html(document.cookie.split('=')[1] + ' 的留言板')
+      $('#submit').click(function () {
+        $.ajax({
+          url: 'http://127.0.0.1:3000/message',
+          type: 'post',
+          dataType: 'json',
+          contentType: 'application/json',
+          data: JSON.stringify({
+            from: cookie_dict['username'],
+            to: $('#say-to').val(),
+            msg: $('#msg').val(),
+            time: new Date().getTime()
+          }),
+          success: function (data) {
+            if (data.success === true) {
+              alert(data.message)
+            } else {
+              $('#result').html(data.message)
+            }
+          }
+        })
+      })
+    })
+  </script>
+</body>
+
+</html>

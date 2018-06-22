@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>发布新闻</title>
+</head>
+
+<body>
+  <h1>发布新闻</h1>
+  <form action="http://127.0.0.1:8080/addNew" method="post">
+    title：
+    <input type="text" name="title">
+    <br> categoryId:
+    <input type="text" name="catagoryId">
+    <br> body：
+    <textarea type="text" name="body" rows="10" cols="50"></textarea>
+    <br>
+    <button type="submit">发布</button>
+  </form>
+</body>
+
+</html>

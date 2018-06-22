@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>新闻中国</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.css">
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</head>
+
+<body class="wrap-0 container-fluid">
+  <header class="wrap-1 row">
+    <div class="col-12 row">
+      <form style="max-height: 30px;" class="col-10 row" action="/login" method="POST">
+        <div class="col-5 row">
+          <label class="col-3" for="username">用户名</label>
+          <input class="col-9" type="text" id="username" name="username">
+        </div>
+        <div class="col-5 row">
+          <label class="col-3" for="password">密码</label>
+          <input class="col-9" type="password" id="password" name="password">
+        </div>
+        <button class="col-1" type="submit">登录</button>
+        <a style="margin-left: 10px;" href="/signUp">注册</a>
+        <a style="margin-left: 10px;" href="/publish">发布新闻</a>
+      </form>
+      <div class="logo col-1 offset-1">
+        <img src="images/header-google.png" alt="logo">
+      </div>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-12 row">
+      <div class="col-2">
+        <img style="width: 100%;" src="images/header-news.png" alt="header-news">
+      </div>
+      <div class="col-10">
+        <img style="width: 100%;" src="images/header-title.png" alt="header-news">
+      </div>
+    </div>
+  </header>
+  <div class="wrap-1-body row">
+    <div class="wrap-2-news col-2">
+      <div class="new margin-top-down-50px">
+        <div class="new-top blue-gradient blue-border">新闻标题</div>
+        <div class="new-body blue-gradient blue-border">
+          新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容
+
+        </div>
+      </div>
+      <div class="new margin-top-down-50px">
+        <div class="new-top blue-gradient blue-border">新闻标题</div>
+        <div class="new-body blue-gradient blue-border">
+          新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容
+
+        </div>
+      </div>
+      <div class="new margin-top-down-50px">
+        <div class="new-top blue-gradient blue-border">新闻标题</div>
+        <div class="new-body blue-gradient blue-border">
+          新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容 新闻内容
+
+        </div>
+      </div>
+    </div>
+    <div class="wrap-2-main col-10 row">
+      <div class="wrap-3-top col-12">
+        <img style="width: 100%" src="images/news-title.png" alt="news-title">
+      </div>
+      <div class="wrap-3-main col-12 row">
+        <div class="wrap-4-article col-9">
+          <div class="wrap-5-top">
+            <div class="blue-gradient row">
+              <a href="#" class="col-2">分类1</a>
+              <a href="#" class="col-2">分类2</a>
+              <a href="#" class="col-2">分类3</a>
+              <a href="#" class="col-2">分类4</a>
+              <a href="#" class="col-2">分类5</a>
+              <a href="#" class="col-2">分类6</a>
+            </div>
+            <hr>
+          </div>
+          <div class="wrap-5-main">
+            <ul class="article-group">
+              <li class="article">
+                <a href="#" class="article-link">文章-1: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-2: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-3: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-4: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-5: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+            </ul>
+            <ul class="article-group">
+              <li class="article">
+                <a href="#" class="article-link">文章-1: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-2: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-3: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-4: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-5: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+            </ul>
+            <ul class="article-group">
+              <li class="article">
+                <a href="#" class="article-link">文章-1: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-2: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-3: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-4: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-5: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+            </ul>
+            <ul class="article-group">
+              <li class="article">
+                <a href="#" class="article-link">文章-1: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-2: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-3: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-4: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-5: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+            </ul>
+            <ul class="article-group">
+              <li class="article">
+                <a href="#" class="article-link">文章-1: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-2: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-3: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-4: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-5: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+            </ul>
+            <ul class="article-group">
+              <li class="article">
+                <a href="#" class="article-link">文章-1: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-2: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-3: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-4: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+              <li class="article">
+                <a href="#" class="article-link">文章-5: 这里是文章的标题，点击跳转到相应文章页面。</a>
+                <span class="article-date">2018-4-17 11:52</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="blue-gradient row">
+              <a href="#" class="col-4">上一页</a>
+              <a href="#" class="col-4">上一页</a>
+              <a href="#" class="col-4">上一页</a>
+            </div>
+          </div>
+        </div>
+        <div class="wrap-4-aside col-3">
+          <div class="margin-top-down-50px">
+            <img style="width: 100%;" src="images/aside-1.png" alt="image" class="aside-img">
+            <a href="#" class="aside-link">图片对应的文字链接</a>
+          </div>
+          <div class="margin-top-down-50px">
+            <img style="width: 100%;" src="images/aside-2.png" alt="image" class="aside-img">
+            <a href="#" class="aside-link">图片对应的文字链接</a>
+          </div>
+          <div class="margin-top-down-50px">
+            <img style="width: 100%;" src="images/aside-3.png" alt="image" class="aside-img">
+            <a href="#" class="aside-link">图片对应的文字链接</a>
+          </div>
+          <div class="margin-top-down-50px">
+            <img style="width: 100%;" src="images/aside-4.png" alt="image" class="aside-img">
+            <a href="#" class="aside-link">图片对应的文字链接</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="wrap-1">
+    <div class="blue-gradient blue-border">
+      合作媒体
+    </div>
+    <div class="blue-gradient blue-border" style="min-height: 8rem;">
+      <div class="row">
+        <a href="#" class="col-2">合作媒体-1</a>
+        <a href="#" class="col-2">合作媒体-2</a>
+        <a href="#" class="col-2">合作媒体-3</a>
+        <a href="#" class="col-2">合作媒体-4</a>
+        <a href="#" class="col-2">合作媒体-5</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

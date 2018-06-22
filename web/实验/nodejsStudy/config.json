@@ -1,0 +1,7 @@
+{
+  "mariaDbAddress": "127.0.0.1",
+  "mariaDbDatabase": "WebDb",
+  "mariaDbUser": "root",
+  "uploadImagePath": "C:\\Mobile\\Cool\\PicFolder\\",
+  "uploadThumbnaiPath": "C:\\Mobile\\Cool\\ThumbnaiFolder\\"
+}

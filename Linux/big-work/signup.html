@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  <title>注册</title>
+</head>
+
+<body>
+  <h1>用户注册</h1>
+  <div class="signup">
+    <label for="username">用户名:</label>
+    <input type="text" id="username" name="username">
+    <br>
+    <label for="password">密码:</label>
+    <input type="password" id="password" name="password">
+    <br>
+    <button id="submit">注册</button>
+    <a href="index.html">返回</a>
+  </div>
+  <div id="result"></div>
+  <a style="display: none;" id="back" href="signup.html">返回</a>
+  <script>
+    $(function () {
+      $('#submit').click(function () {
+        $.ajax({
+          url: 'http://127.0.0.1:3000/signup',
+          type: 'post',
+          contentType: 'application/json',
+          dataType: 'json',
+          data: JSON.stringify({
+            'username': $('#username').val(),
+            'password': $('#password').val()
+          }),
+          success: function (data) {
+            if (data.success === true) {
+              alert(data.message)
+            } else if (data.success === false) {
+              $('.signup').html(data.message)
+              $('#back').css('display', 'inline')
+            }
+          }
+        })
+      })
+    })
+  </script>
+</body>
+
+</html>

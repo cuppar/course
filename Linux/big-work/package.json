@@ -1,0 +1,24 @@
+{
+  "name": "big-work",
+  "version": "0.1.0",
+  "description": "linux big work",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuppar/big-work.git"
+  },
+  "author": "cuppar <cuppar.hzy@gmail.com> (https://github.com/cuppar/)",
+  "bugs": {
+    "url": "https://github.com/cuppar/big-work/issues/"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server.js"
+  },
+  "homepage": "https://github.com/cuppar/big-work#readme"
+}

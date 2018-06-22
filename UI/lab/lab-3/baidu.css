@@ -51,3 +51,12 @@
 #head .footer {
   text-align: center;
 }
+.footer {
+  margin: 5px 0;
+}
+.footer div * {
+  display: inline-block;
+  font-size: 13px;
+  color: #aaa;
+  margin: 5px 10px;
+} 
