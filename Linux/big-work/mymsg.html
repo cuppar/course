@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  <title>我的留言</title>
+</head>
+
+<body>
+  <div id="title"></div>
+  <div id="content"></div>
+  <script>
+    $(function () {
+      let cookies = document.cookie.split('; ')
+      let cookie_dict = {}
+      cookies.forEach(function (value) {
+        let cookie_name = value.split('=')[0]
+        let cookie_value = value.split('=')[1]
+        cookie_dict[cookie_name] = cookie_value
+      })
+
+      $.ajax({
+        url: 'http://127.0.0.1:3000/mymsg',
+        type: 'post',
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify({
+          username: cookie_dict['username']
+        }),
+        success: function (data) {
+          if (data.success === true) {
+
+            $('#title').html('<h1>' + cookie_dict['username'] + ' 的留言记录</h1>' +
+              '<div class="center">' +
+              '<a href="login.html">注销</a>' +
+              '<a href="msg.html">返回</a><hr>' + '</div>')
+            let content =
+              '<table class="center" border="1">\n<tr>\n<th>发送者</th>\n<th>内容</th>\n<th>时间</th>\n</tr>\n'
+            data.results.forEach(function (value) {
+              content += '<tr>\n<td>' + value['from'] + '</td>\n<td>' +
+                value['msg'] + '</td>\n<td>' +
+                new Date(value['time']).toLocaleString() + '</td>\n</tr>\n'
+            })
+            content += '</table>'
+            $('#content').html(content)
+          } else {
+            $('#title').html('<h1>404</h1>')
+          }
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>

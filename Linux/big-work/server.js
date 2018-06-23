@@ -136,6 +136,20 @@ app.post('/message', function (req, res) {
   return res.json(res_content)
 })
 
+app.post('/mymsg', function (req, res) {
+  let username = req.body.username
+  let res_content = {
+    success: true,
+    results: []
+  }
+  msgs.forEach(function (value) {
+    if (value.to === username) {
+      res_content.results.push(value)
+    }
+  })
+  return res.json(res_content)
+})
+
 let server = app.listen(3000, function () {
   let host = server.address().address
   let port = server.address().port
